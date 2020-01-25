@@ -1,0 +1,46 @@
+move north
+go north
+jump up
+climb tree
+grab lantern
+blow out lantern
+light lantern
+enter building
+climb to roof
+open mailbox
+empty mailbox
+drop mail
+read letter
+dig down
+punch through wall
+punch wall
+
+We have directional commands, ie go north, dig down, go through window*. Verb followed by preposition.
+
+We have Verb Object command formats, ie open mailbox, enter building, blow out lantern.
+
+We have special commands, ie clear, restart, look, inventory**.
+
+
+Idea:
+Each object holds a list of usable verbs that can influence it. You can swing a lantern but you cannot climb a lantern.
+Each object is influenced differently by each of those verbs.
+Each object has a base case verb response, ie I do not understand you command.
+If the player uses a known verb incorrectly, use "if contains" to give suggestions for how to use the verb.
+All objects have a description. Type "mailbox" > This is an old, open mailbox whose contents have been emptied.
+One cannot read the description of an object if they are not in the same locale as the player.
+All objects hold a location.
+When the player changes location, the objects in their pack change location.
+
+Visual:
+>Welcome to the game. You see a white house with a mailbox.
+-Take mail.
+>You packed "a letter".
+-read letter
+>This letter is addressed to ---. Written in blue ink it says:...
+-go south
+
+
+
+*may not include verb preposition object combos
+**some commands may not need verbs, ie open inventory (open is not necessary).

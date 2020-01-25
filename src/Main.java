@@ -81,16 +81,21 @@ public class Main extends Application {
         textPane.setBottom(textField);
         textPane.setCenter(scrollPane);
         scrollPane.setContent(innerVBox);
+
+        //Read in a file to make this better
         HashMap<String,String> dictionary = new HashMap<>();
         dictionary.put("tree","Tree.java");
         dictionary.put("trees","Tree.java");
         dictionary.put("oak", "Tree.java");
+
         ParserTool thisParser = new ParserTool(dictionary);
 //        thisParser.Parse("word");
 //        System.out.println(dictionary.get("key"));
 
-        innerVBox.getChildren().add(new Label(" == You are in a large field with a single large oak tree.\n" +
-                "What do you do? =="));
+        innerVBox.getChildren().add(new Label("\tYou are in a large field with a single large oak tree." +
+                " What do you do?"));
+
+        //Get text in textField, clear textField, add text as a new label
         textField.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -99,7 +104,9 @@ public class Main extends Application {
                     innerVBox.getChildren().add(new Label(newWords));
                     textField.clear();
 //                    System.out.println("Typed words: " + newWords);
-                    thisParser.Parse(newWords);
+                    String reaction = thisParser.Parse(newWords);
+                    System.out.println(reaction);
+                    innerVBox.getChildren().add(new Label("\t" + reaction));
                 }
             }
         });

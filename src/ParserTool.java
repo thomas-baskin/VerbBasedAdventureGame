@@ -20,7 +20,7 @@ public class ParserTool {
                 System.out.println(word + "'s value is : " + value);
                 if(value.equals("Tree.java")){
                     Tree tree = new Tree(phrase,word);
-                    return tree.getTreeReaction();
+                    return tree.getReaction();
                 }
             }
         }return "No nouns identified.";

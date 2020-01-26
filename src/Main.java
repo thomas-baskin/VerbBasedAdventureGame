@@ -74,6 +74,7 @@ public class Main extends Application {
 
     String newWords;
     public void start(Stage primaryStage){
+        //GUI Setup
         BorderPane textPane = new BorderPane();
         TextField textField = new TextField();
         ScrollPane scrollPane = new ScrollPane();
@@ -87,11 +88,13 @@ public class Main extends Application {
         dictionary.put("tree","Tree.java");
         dictionary.put("trees","Tree.java");
         dictionary.put("oak", "Tree.java");
+//        dictionary.put("oak tree", "Tree.java");
 
         ParserTool thisParser = new ParserTool(dictionary);
 //        thisParser.Parse("word");
 //        System.out.println(dictionary.get("key"));
 
+        //Intro
         innerVBox.getChildren().add(new Label("\tYou are in a large field with a single large oak tree." +
                 " What do you do?"));
 

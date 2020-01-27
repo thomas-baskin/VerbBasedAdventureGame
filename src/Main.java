@@ -88,7 +88,6 @@ public class Main extends Application {
         dictionary.put("tree","Tree.java");
         dictionary.put("trees","Tree.java");
         dictionary.put("oak", "Tree.java");
-//        dictionary.put("oak tree", "Tree.java");
 
         ParserTool thisParser = new ParserTool(dictionary);
 //        thisParser.Parse("word");

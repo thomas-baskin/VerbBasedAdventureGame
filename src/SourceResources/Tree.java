@@ -1,4 +1,4 @@
-package Resources;
+package SourceResources;
 
 import java.io.*;
 import java.util.HashMap;
@@ -12,6 +12,7 @@ public class Tree {
         this.wholeSentence = wholeSentence;
         this.noun = noun;
         otherArguments = wholeSentence.replace(noun,"");
+        // otherArguments = "cut down the "
         this.reaction = Tree();
     }
     private String Tree(){

@@ -72,6 +72,7 @@ public class Main extends Application {
 //        System.out.println(mainMap.getLocation(0,1).entities.get(0).getDescription());
     }
 
+    //the start method runs automatically when Main extends Application
     String newWords;
     public void start(Stage primaryStage){
         //GUI Setup
@@ -106,8 +107,10 @@ public class Main extends Application {
                     innerVBox.getChildren().add(new Label(newWords));
                     textField.clear();
 //                    System.out.println("Typed words: " + newWords);
+
                     String reaction = thisParser.Parse(newWords);
                     System.out.println(reaction);
+
                     innerVBox.getChildren().add(new Label("\t" + reaction));
                 }
             }

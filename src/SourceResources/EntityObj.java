@@ -1,8 +1,10 @@
-public class Entity {
+package SourceResources;
+
+public class EntityObj{
     private String name;
     private String description;
     private boolean packable; // Can it go into the player's pack?
-    Entity(String name, String description, boolean packable){
+    EntityObj(String name, String description, boolean packable){
         this.name = name;
         this.description = description;
         this.packable = packable;

@@ -1,3 +1,5 @@
+import SourceResources.Entity;
+
 import java.util.ArrayList;
 
 public class Location {

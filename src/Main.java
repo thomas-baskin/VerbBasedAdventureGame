@@ -1,3 +1,4 @@
+import SourceResources.Entity;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -22,22 +23,22 @@ public class Main extends Application {
         ArrayList<Entity> entities00 = new ArrayList<>();
         ArrayList<Entity> entities01 = new ArrayList<>();
 
-        Entity mailbox = new Entity("mailbox",
-                "This metal mailbox with chipping" +
-                " white paint sits firmly atop an old, white, wooden post.",
-                false);
-        entities00.add(mailbox);
+        //Entity mailbox = new Entity("mailbox",
+                //"This metal mailbox with chipping" +
+                //" white paint sits firmly atop an old, white, wooden post.",
+                //false);
+        //entities00.add(mailbox);
 
-        Entity tree = new Entity("tree",
-                "This is a tall, oak tree with thick branches." +
-                        " The branches lean to one side, likely to the constant wind...",
-                false);
-        entities01.add(tree);
+        //Entity tree = new Entity("tree",
+                //"This is a tall, oak tree with thick branches." +
+                        //" The branches lean to one side, likely to the constant wind...",
+                //false);
+        //entities01.add(tree);
 
-        Entity bottle = new Entity("empty bottle",
-                "This old, brown, glass beer bottle was tossed aside long ago...",
-                true);
-        entities01.add(bottle);
+        //Entity bottle = new Entity("empty bottle",
+                //"This old, brown, glass beer bottle was tossed aside long ago...",
+                //true);
+        //entities01.add(bottle);
 
         /** Creating Locations
          * It is important to note that the yPos starts in the left corner of the map and increases southward.
@@ -47,25 +48,25 @@ public class Main extends Application {
          * -----------------
          * (0,2)|(1,2)|(2,2)
          */
-        Location location00 = new Location(0,0,entities00,"This is location 00. Welcome to the map.");
-        Location location01 = new Location(0,1,entities01,"This is location 01. You are south of location 00.");
-        Location location11 = new Location(1,1,entities01,"This is location 11. You are southeast of location 00.");
-        Location location10 = new Location(1,0,entities01,"This is location 10. You are east of location 00.");
+        //Location location00 = new Location(0,0,entities00,"This is location 00. Welcome to the map.");
+        //Location location01 = new Location(0,1,entities01,"This is location 01. You are south of location 00.");
+        //Location location11 = new Location(1,1,entities01,"This is location 11. You are southeast of location 00.");
+        //Location location10 = new Location(1,0,entities01,"This is location 10. You are east of location 00.");
 
         //Adding Locations to the Map Array
-        Map mainMap = new Map(2,2);
-        mainMap.setLocation(location00);
-        mainMap.setLocation(location01);
-        mainMap.setLocation(location11);
-        mainMap.setLocation(location10);
+        //Map mainMap = new Map(2,2);
+        //mainMap.setLocation(location00);
+        //mainMap.setLocation(location01);
+        //mainMap.setLocation(location11);
+        //mainMap.setLocation(location10);
 
-        System.out.println(mainMap.returnMap());
+        //System.out.println(mainMap.returnMap());
 
-        System.out.println(mainMap.getLocation(0,0).message);
-        System.out.println(mainMap.getLocation(0,0).entities.get(0).getName());
-        System.out.println(mainMap.getLocation(0,0).entities.get(0).getDescription());
-        player1.moveDirection(mainMap,'S');
-        player1.moveDirection(mainMap,'E');
+        //System.out.println(mainMap.getLocation(0,0).message);
+        //System.out.println(mainMap.getLocation(0,0).entities.get(0).getName());
+        //System.out.println(mainMap.getLocation(0,0).entities.get(0).getDescription());
+        //player1.moveDirection(mainMap,'S');
+        //player1.moveDirection(mainMap,'E');
 
 //        System.out.println(mainMap.getLocation(0,1).message);
 //        System.out.println(mainMap.getLocation(0,1).entities.get(0).getName());

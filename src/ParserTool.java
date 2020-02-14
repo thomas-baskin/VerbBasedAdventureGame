@@ -31,7 +31,8 @@ public class ParserTool {
                 String value = hashMap.get(word);
                 System.out.println(word + "'s value is : " + value);
                 if(value.equals("Tree.java")){
-                    Tree tree = new Tree(cleanedString,word);
+                    Tree tree = new Tree(cleanedString,word,value.replace(".java",""),
+                            "oak tree", "here is a description of an oak tree",false);
                     return tree.getReaction();
                 }
             }
